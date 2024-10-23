@@ -12,12 +12,8 @@ npm install scrivito-icon-editor
 
 ### Bootstrap Icons in a Scrivito application
 
-The `ScrivitoBootstrapIconEditor` property group component comes with predefined styling.
-
 ```ts
 // IconWidgetEditingConfig.ts
-import 'bootstrap-icons/font/bootstrap-icons.css'
-import 'scrivito-icon-editor/ScrivitoIconEditor.css'
 import { ScrivitoBootstrapIconEditor } from 'scrivito-icon-editor'
 
 provideEditingConfig(IconWidget, {
@@ -32,12 +28,20 @@ provideEditingConfig(IconWidget, {
 })
 ```
 
-#### With options
+#### Importing styles
+
+The `ScrivitoBootstrapIconEditor` includes built-in styles for easy integration. To apply these styles, import the following CSS files in your project:
+
+```scss
+// scrivitoExtensions.scss
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+@import 'scrivito-icon-editor/ScrivitoIconEditor.css';
+```
+
+#### Using the icon editor with options
 
 ```tsx
 // defaultPageEditingConfig.tsx
-import 'bootstrap-icons/font/bootstrap-icons.css'
-import 'scrivito-icon-editor/ScrivitoIconEditor.css'
 import { ScrivitoBootstrapIconEditor } from 'scrivito-icon-editor'
 
 export const defaultPagePropertiesGroups = [
