@@ -68,7 +68,9 @@ export function IconPicker({
 
   function search(terms: string[]) {
     setMatchingIcons(
-      icons.filter((icon) => terms.every((term) => icon.includes(term))),
+      icons.filter((icon) =>
+        terms.every((term) => icon.toLowerCase().includes(term.toLowerCase())),
+      ),
     )
   }
 }
