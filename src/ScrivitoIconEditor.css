@@ -180,6 +180,17 @@
     }
   }
 
+  &:has(:placeholder-shown) .icon-select {
+    display: none;
+  }
+
+  &:has(label:active),
+  .icon-dialog:focus-within {
+    .icon-select {
+      display: grid;
+    }
+  }
+
   &:after {
     content: '';
     clear: right;
@@ -205,16 +216,5 @@
     --icon-select-button-hover-color: #fff;
 
     padding: 7px;
-
-    &:has(:placeholder-shown) .icon-select {
-      display: none;
-    }
-
-    &:has(label:active),
-    .icon-dialog:focus-within {
-      .icon-select {
-        display: grid;
-      }
-    }
   }
 }
