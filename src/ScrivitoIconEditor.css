@@ -146,7 +146,7 @@
   }
 
   .icon-select {
-    display: grid;
+    display: none;
     gap: 2px;
     grid-template-columns: repeat(auto-fill, 33px);
     justify-content: space-between;
@@ -178,10 +178,6 @@
         color: var(--icon-select-button-hover-color);
       }
     }
-  }
-
-  &:has(:placeholder-shown) .icon-select {
-    display: none;
   }
 
   &:has(label:active),
