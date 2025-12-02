@@ -12,10 +12,7 @@
     "dist"
   ],
   "types": "./dist/index.d.ts",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JustRelate/scrivito-icon-editor.git"
-  },
+  "repository": "github:JustRelate/scrivito-icon-editor",
   "scripts": {
     "build": "rm -rf dist && tsc && cp src/*.css dist",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
