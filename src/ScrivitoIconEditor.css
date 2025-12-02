@@ -185,7 +185,7 @@
   }
 
   &:has(label:active),
-  .icon-dialog:focus-within {
+  .icon-dialog:has(input:focus, button:active) {
     .icon-select {
       display: grid;
     }
