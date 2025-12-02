@@ -146,7 +146,7 @@
   }
 
   .icon-select {
-    display: grid;
+    display: none;
     gap: 2px;
     grid-template-columns: repeat(auto-fill, 33px);
     justify-content: space-between;
@@ -180,6 +180,13 @@
     }
   }
 
+  &:has(label:active),
+  .icon-dialog:has(input:focus, button:active) {
+    .icon-select {
+      display: grid;
+    }
+  }
+
   &:after {
     content: '';
     clear: right;
@@ -205,16 +212,5 @@
     --icon-select-button-hover-color: #fff;
 
     padding: 7px;
-
-    &:has(:placeholder-shown) .icon-select {
-      display: none;
-    }
-
-    &:has(label:active),
-    .icon-dialog:focus-within {
-      .icon-select {
-        display: grid;
-      }
-    }
   }
 }
